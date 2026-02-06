@@ -8,20 +8,44 @@
     tools:context=".MainActivity"
     android:padding="6dp">
 
-    <Button
-        android:id="@+id/buttonAddCity"
-        android:text="Add City"
-        android:textSize="20sp"
-        android:layout_width="wrap_content"
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="10dp"/>
+
+        >
+        <Button
+            android:id="@+id/buttonAddCity"
+            android:text="Add City"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/buttonDeleteCity"
+            android:text="Delete City"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="20sp"
+            android:layout_marginEnd="10dp"
+            >
+        </Button>
+
+    </LinearLayout>
 
     <ListView
         android:id="@+id/listviewCities"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/buttonAddCity" />
+        app:layout_constraintTop_toBottomOf="@+id/buttons" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
